@@ -14,7 +14,7 @@ if st.button("Buscar Clima", type="primary"):
     if not localizacao.strip():
         st.warning("Por favor, digite um local válido.")
     else:
-        api_key = "e4cd28582ab54fb0a5600925252104"
+        api_key = st.secrets["API_KEY"]
         url = "http://api.weatherapi.com/v1/forecast.json"
         
         parametros = {
